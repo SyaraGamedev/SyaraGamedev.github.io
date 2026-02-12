@@ -1,0 +1,114 @@
+:root{
+  --bg:#0b1220;
+  --card:#111a2e;
+  --text:#e8eefc;
+  --muted:#b8c4e6;
+  --link:#8bb3ff;
+  --border:rgba(255,255,255,.12);
+  --shadow:0 10px 30px rgba(0,0,0,.35);
+  --radius:14px;
+}
+
+@media (prefers-color-scheme: light){
+  :root{
+    --bg:#f6f7fb;
+    --card:#ffffff;
+    --text:#101322;
+    --muted:#4c556a;
+    --link:#245dff;
+    --border:rgba(0,0,0,.10);
+    --shadow:0 10px 30px rgba(0,0,0,.10);
+  }
+}
+
+*{ box-sizing:border-box; }
+body{
+  margin:0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
+  background: linear-gradient(180deg, var(--bg), rgba(0,0,0,0)) fixed;
+  color: var(--text);
+  line-height: 1.8;
+}
+a{ color: var(--link); text-decoration:none; }
+a:hover{ text-decoration:underline; }
+
+.wrap{ max-width: 920px; margin:0 auto; padding: 22px 18px; }
+
+.site-header{
+  position: sticky;
+  top: 0;
+  backdrop-filter: blur(8px);
+  background: rgba(0,0,0,.15);
+  border-bottom: 1px solid var(--border);
+}
+.header-inner{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:16px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+.brand-title{ font-weight:800; font-size:18px; letter-spacing:.02em; }
+.brand-sub{ color: var(--muted); font-size:12px; }
+
+.nav{ display:flex; gap:10px; flex-wrap:wrap; justify-content:flex-end; }
+.nav a{
+  padding: 8px 10px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: rgba(255,255,255,.03);
+}
+
+.card{
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 22px 20px;
+}
+
+.hero h1{ margin:0 0 6px; font-size:26px; }
+.muted{ color: var(--muted); margin: 0 0 16px; }
+
+.grid{
+  display:grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  margin-top: 12px;
+}
+@media (min-width: 720px){
+  .grid{ grid-template-columns: 1fr 1fr; }
+}
+
+.tile{
+  display:block;
+  padding: 16px 14px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: rgba(255,255,255,.02);
+}
+.tile-title{ font-weight:800; font-size:16px; margin-bottom:4px; }
+.tile-sub{ color: var(--muted); font-size:13px; }
+
+.note{
+  margin-top: 18px;
+  padding-top: 12px;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.site-footer{
+  margin-top: 18px;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+}
+.footer-inner{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  flex-wrap:wrap;
+}
+.footer-links{ display:flex; gap:12px; flex-wrap:wrap; }
