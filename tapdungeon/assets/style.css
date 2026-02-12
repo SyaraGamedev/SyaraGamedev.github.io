@@ -112,3 +112,14 @@ a:hover{ text-decoration:underline; }
   flex-wrap:wrap;
 }
 .footer-links{ display:flex; gap:12px; flex-wrap:wrap; }
+
+pre{
+  white-space: pre-wrap;
+  word-break: break-word;
+  margin: 12px 0 0;
+  padding: 12px 14px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: rgba(255,255,255,.02);
+  overflow: auto;
+}
